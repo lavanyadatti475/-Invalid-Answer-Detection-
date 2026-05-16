@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Invalid Answer Detection</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Invalid Answer Detection Module</h1>
+
+    <form method="POST">
+
+        <textarea
+            name="answer"
+            placeholder="Enter your answer here..."
+            required></textarea>
+
+        <button type="submit">
+
+            Detect Answer Type
+
+        </button>
+
+    </form>
+
+    {% if result %}
+
+    <div class="result">
+
+        <h2>Classification Result</h2>
+
+        <p><strong>Answer:</strong> {{ answer }}</p>
+
+        <p>
+
+            <strong>Classification:</strong>
+
+            <span class="classification">
+
+                {{ result.upper() }}
+
+            </span>
+
+        </p>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>
