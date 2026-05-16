@@ -1,4 +1,3 @@
-````markdown id="k3r9tm"
 # Invalid Answer Detection Module
 
 ## Overview
